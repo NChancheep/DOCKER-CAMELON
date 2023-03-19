@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  db:
+    build: ./camelon-server
+    environment:
+      MYSQL_ROOT_PASSWORD: mahidol2022
+      MYSQL_DATABASE: camelon
+    restart: always
+  camelon-back:
+    build: ./camelon-server
+    environment:
+      MYSQL_DATABASE: camelon
+      MYSQL_USER: root
+      MYSQL_PASSWORD: mahidol2022
+      MYSQL_HOST: localhost
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    restart: on-failure
+  camelon-front:
+    build: ./camelon-client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - camelon-back 
+    restart: on-failure
