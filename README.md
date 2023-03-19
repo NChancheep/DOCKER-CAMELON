@@ -6,7 +6,7 @@ This is our team member<br>
 2. Pattadon Singhajan 6288127<br>
 3. Kantapong Matangkarat 6288160<br>
 <br>
-And this is for sending work to university professors and NSC competition 2023 only<br>
+And this is for sending work to Senior project and NSC competition 2023 only and is not for commercial use.<br>
 //////////////////////////////////////////////////////////////////////////////////////////
 <!-- <br>
 How to run this project<br>
