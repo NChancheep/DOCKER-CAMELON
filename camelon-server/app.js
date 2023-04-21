@@ -14,98 +14,189 @@ const db = mysql.createPool({
   database: process.env.MYSQL_DATABASE || "camelon",
 });
 
-
-
-app.get("/thairath_metadata", (req, res) => {
-  db.query("SELECT * FROM thairath_metadata", (err, result) => {
-    if (err) {
-      console.log(err);
-    } else {
-      res.send(result);
-    }
-  });
-});
-
-app.get("/crimetypes_count", (req, res) => {
-  console.log(req.query.year);
-  if (req.query.year == "all_year") {
-    db.query(
-      `SELECT crime_type, COUNT(*) as crime_rate
-      FROM thairath_metadata WHERE  YEAR(date) BETWEEN '1970' AND '3000'
-      GROUP BY crime_type
-      ORDER BY crime_rate
+app.get("/years", (req, res) => {
+  db.query(
+    `SELECT  year  FROM news_summary_table_monthly_all_year group by year;
       `,
+    (err, result) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});
+
+app.get("/news_crimes_statistics_per_year", (req, res) => {
+  db.query(
+          ` SELECT SUM(Gambling) AS Gambling,
+          SUM(Murder) AS Murder,
+          SUM(\`Sexual Abuse\`) AS \`Sexual Abuse\`,
+          SUM(\`Theft/Burglary\`) AS \`Theft/Burglary\`,
+          SUM(Drug) AS Drug,
+          SUM(\`Battery/Assault\`) AS \`Battery/Assault\`,
+          SUM(Accident) AS Accident from news_crime_statistics where year between ? and ?;
+        `,[req.query.yearStart, req.query.yearEnd],
+          
+          (err, result) => {
+            if (err) {
+              console.log(err);
+              res.status(500).send(err);
+            } else {
+              res.send(result);
+              console.log(result);
+            }
+          }
+        );
+//   if (req.query.year === "") {
+//     db.query(
+//       `SELECT SUM(Gambling) AS Gambling,
+//       SUM(Murder) AS Murder,
+//       SUM(\`Sexual Abuse\`) AS \`Sexual Abuse\`,
+//       SUM(\`Theft/Burglary\`) AS \`Theft/Burglary\`,
+//       SUM(Drug) AS Total_Drug,
+//       SUM(\`Battery/Assault\`) AS \`Battery/Assault\`,
+//       SUM(Accident) AS Accident
+// FROM news_crime_statistics;
+//     `,
+      
+//       (err, result) => {
+//         if (err) {
+//           console.log(err);
+//           res.status(500).send(err);
+//         } else {
+//           res.send(result);
+//           console.log(result);
+//         }
+//       }
+//     );
+
+
+//   } else {
+
+//     db.query(
+//       `SELECT * from news_crime_statistics where year = ?
+//     `,
+//       [req.query.year],
+//       (err, result) => {
+//         if (err) {
+//           console.log(err);
+//           res.status(500).send(err);
+//         } else {
+//           res.send(result);
+//           console.log(result);
+//         }
+//       }
+//     );
+
+//   }
+ 
+});
+
+app.get("/news_crimes_summary", (req, res) => {
+  if(req.query.crimeType === "") {
+    db.query(
+      `SELECT year, month, SUM(Gambling + Murder + \`Sexual Abuse\` + \`Theft/Burglary\` + Drug + \`Battery/Assault\` + Accident) as Numbers FROM news_summary_table_monthly_all_year
+      WHERE year between ? and ?
+      group by year,month  
+      order by year, month
+    `,
+      [req.query.yearStart, req.query.yearEnd],
       (err, result) => {
         if (err) {
           console.log(err);
           res.status(500).send(err);
         } else {
-          console.log(result);
           res.send(result);
+          console.log(result);
         }
       }
     );
+
   } else {
     db.query(
-      `SELECT crime_type, COUNT(*) as crime_rate
-    FROM thairath_metadata WHERE YEAR(date) = ?
-    GROUP BY crime_type
-    ORDER BY crime_rate`,
-      [req.query.year],
+      `SELECT year, month, SUM(\`${req.query.crimeType}\`) as Numbers FROM news_summary_table_monthly_all_year
+      WHERE year between ? and ?
+      group by year,month  
+      order by year, month
+    `,
+      [req.query.yearStart, req.query.yearEnd],
       (err, result) => {
         if (err) {
           console.log(err);
           res.status(500).send(err);
         } else {
-          console.log(result);
           res.send(result);
+          console.log(result);
         }
       }
     );
+
+  }
+  
+});
+
+app.get("/news_crime_statistics", (req, res) => {
+  console.log(req.query.crimeType)
+  if (req.query.crimeType === "") {
+    db.query(
+      `SELECT year, SUM(Gambling + Murder + \`Sexual Abuse\` + \`Theft/Burglary\` + Drug + \`Battery/Assault\` + Accident) AS Numbers from news_crime_statistics where year between ? and ? group by year`,
+      [req.query.yearStart, req.query.yearEnd]
+      ,
+      (err, result) => {
+        if (err) {
+          console.log(err);
+          res.status(500).send(err);
+        } else {
+          res.send(result);
+          console.log(result);
+        }
+      }
+    );
+
+  } else {
+    db.query(
+      `select year, SUM(\`${req.query.crimeType}\`) as Numbers from news_crime_statistics where year between ? and ? group by year`,
+      [req.query.yearStart, req.query.yearEnd]
+      ,
+      (err, result) => {
+        if (err) {
+          console.log(err);
+          res.status(500).send(err);
+        } else {
+          res.send(result);
+          console.log(result);
+        }
+      }
+    );
+
   }
 });
 
-app.get("/crimecount", (req, res) => {
-  console.log(req.query.year);
+app.get("/provinces_statistics", (req, res) => {
 
-  if (req.query.year == "all_year") {
-    db.query(
-      `SELECT YEAR(DATE) AS Year, COUNT(*) as crime_rate
-      FROM thairath_metadata WHERE  YEAR(date) BETWEEN '1970' AND '3000'
-      GROUP BY YEAR(DATE)
-      ORDER BY YEAR(DATE)
-        `,
-      [req.query.year],
-      (err, result) => {
-        if (err) {
-          console.log(err);
-          res.status(500).send(err);
-        } else {
-          console.log(result);
-          res.send(result);
-        }
+  db.query(
+    `select * from news_statistics_by_province order by numbers desc
+`,
+    [req.query.year],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send(err);
+      } else {
+        res.send(result);
+        console.log(result);
       }
-    );
-  } else {
-    db.query(
-      `SELECT MONTH(date) AS Month, COUNT(*) as crime_rate
-        FROM thairath_metadata 
-        WHERE YEAR(date) = ?
-        GROUP BY Month
-        ORDER BY Month;
-        `,
-      [req.query.year],
-      (err, result) => {
-        if (err) {
-          console.log(err);
-          res.status(500).send(err);
-        } else {
-          // console.log(result);
-          res.send(result);
-        }
-      }
-    );
-  }
+    }
+  );
+
 });
+
+
+
+
+
 
 app.listen(3001, () => console.log("listining on port 3001"));

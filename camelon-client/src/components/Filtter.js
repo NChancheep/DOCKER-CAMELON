@@ -16,17 +16,21 @@ function FiltterComponent() {
 
   const [districtList, setDistrictList] = useState([]);
   const [subdistrictList, setSubdistrictList] = useState([]);
+  const [provinceId, setProvinceId] = useState();
+  const [districtId, setDistrictId] = useState();
   const [subdistrictId, setSubdistrictId] = useState();
 
   const getDistrictList = (province_id) => {
+    setProvinceId(province_id);
     const districts_list = districts.filter(
       (district) => district.province_id === parseInt(province_id)
     );
-    console.log(districts_list);
+    // console.log(districts_list);
     setDistrictList(districts_list);
   };
 
   const getSubdistrictList = (district_id) => {
+    setDistrictId(district_id);
     const subdistrict_list = subdistricts.filter(
       (subdistrict) => subdistrict.district_id === parseInt(district_id)
     );
@@ -34,16 +38,49 @@ function FiltterComponent() {
   };
 
   const getLatLong = (id) => {
-    let position = subdistrictList.find(
-      (subdistrict) => subdistrict.id === parseInt(id)
-    );
+    console.log(provinceId);
+    console.log(districtId);
+    console.log(subdistrictId);
 
-    const user_current_location = {
-      latitude: position.latitude,
-      longitude: position.longitude,
-    };
+    if (
+      provinceId !== undefined &&
+      districtId === undefined &&
+      subdistrictId === undefined
+    ) {
+      let position = provinces.find(
+        (province) => province.code === parseInt(provinceId)
+      );
 
-    dispatch(change_current_location(user_current_location));
+      const user_current_location = {
+        latitude: position.latitude,
+        longitude: position.longitude,
+      };
+      dispatch(change_current_location(user_current_location));
+    } else if (
+      provinceId !== undefined &&
+      districtId !== undefined &&
+      subdistrictId === undefined
+    ) {
+      let position = districtList.find(
+        (district) => district.code === parseInt(districtId)
+      );
+
+      const user_current_location = {
+        latitude: position.latitude,
+        longitude: position.longitude,
+      };
+      dispatch(change_current_location(user_current_location));
+    } else {
+      let position = subdistrictList.find(
+        (subdistrict) => subdistrict.id === parseInt(subdistrictId)
+      );
+        console.log(position)
+      const user_current_location = {
+        latitude: position.latitude,
+        longitude: position.longitude,
+      };
+      dispatch(change_current_location(user_current_location));
+    }
   };
 
   return (
@@ -101,9 +138,7 @@ function FiltterComponent() {
           style={{ width: "100%" }}
           class="bg-white text-black hover:bg-black hover:text-white border border-black rounded"
           type="submit"
-          onClick={() => {
-            getLatLong(subdistrictId);
-          }}
+          onClick={getLatLong}
         >
           ค้นหา
         </button>

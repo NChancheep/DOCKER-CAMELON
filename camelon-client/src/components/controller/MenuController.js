@@ -4,6 +4,7 @@ import Display from "../Display";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Filtter from "../Filtter";
+import ColorType from "../ColorType";
 import Heading from "../Heading";
 import Card from "react-bootstrap/Card";
 export default function MenuController() {
@@ -135,12 +136,21 @@ export default function MenuController() {
 
         <Row xs>
           <Col>
-            {state.mode === "overview" || state.mode === "choropleth_map"? (
+            {state.mode === "overview" || state.mode === "choropleth_map" ? (
               <div></div>
             ) : (
-              <Card>
-                <Filtter></Filtter>
-              </Card>
+              <div>
+                <Card>
+                  <Filtter></Filtter>
+                </Card>
+                {state.mode === "pin_map" ? (
+                  <Card style={{ marginTop: "1%" }}>
+                    <ColorType></ColorType>
+                  </Card>
+                ) : (
+                  <div></div>
+                )}
+              </div>
             )}
           </Col>
         </Row>

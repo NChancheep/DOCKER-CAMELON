@@ -1,5 +1,16 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import L from "leaflet";
+import {
+  Accident,
+  Battery_Assault,
+  Drug,
+  Gambling,
+  Murder,
+  SexualAbuse,
+  Theft_Burglary,
+} from "../../store/data/contact.js";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -14,7 +25,7 @@ import SexualAbuse_Icon from "../../assets/iconPin/ColorIcon/Sexual_Abuse_Green.
 import Theft_Icon from "../../assets/iconPin/ColorIcon/Theft_Green.png";
 import Other_Icon from "../../assets/iconPin/ColorIcon/Other_Green.png";
 import Your_Icon from "../../assets/iconPin/ColorIcon/Your_Green.png";
-
+import TimeSelecter from "../TimeSelecter";
 import {
   MapContainer,
   TileLayer,
@@ -26,7 +37,6 @@ import {
 
 import MarkerClusterGroup from "react-leaflet-cluster";
 
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 import { useSelector } from "react-redux";
@@ -102,15 +112,8 @@ function getCrimeTypeName(crimeTypeMetadata) {
       return "อื่นๆ";
   }
 }
-// L.Marker.prototype.options.icon = DefaultIcon;
-
-// function TimeSlider() {
-//   return <input type="range" min="0" max="100" />;
-// }
 
 export default function Pinmap() {
-  // const [startDate, setStartDate] = useState(new Date());
-  // const [endDate, setEndDate] = useState(new Date());
   let dateMockStart = new Date("2000-01-01T00:00:00");
   let dateMockEnd = new Date("2030-01-01T00:00:00");
   const [dateRange, setDateRange] = useState([dateMockStart, dateMockEnd]);
@@ -124,46 +127,145 @@ export default function Pinmap() {
   const { news_info } = useSelector((state) => state.data);
   const { news } = useSelector((state) => state.data);
   const { user_current_location } = useSelector((state) => state.data);
+  const { selectedMonths } = useSelector((state) => state.data);
+  const { selectedYear } = useSelector((state) => state.data);
+
+  useEffect(() => {
+    // let earliestSelectedMonth = null;
+    // let latestSelectedMonth = null;
+    // let earliestStartDate = null;
+    // let latestStartDate = null;
+    // console.log(selectedMonths)
+
+    // for (let i = 0; i < selectedMonths.length; i++) {
+    //   const month = selectedMonths[i];
+    //   if (month.isSelected === true) {
+    //     if (
+    //       earliestSelectedMonth === null ||
+    //       month.number < earliestSelectedMonth.number
+    //     ) {
+    //       earliestSelectedMonth = month;
+    //     }
+    //     if (
+    //       latestSelectedMonth === null ||
+    //       month.number > latestSelectedMonth.number
+    //     ) {
+    //       latestSelectedMonth = month;
+    //     }
+    //   }
+    // }
+    // // console.log(earliestSelectedMonth, latestSelectedMonth)
+    // if (earliestSelectedMonth !== null) {
+    //   if ((selectedYear === "")) {
+    //     let year = "1970";
+    //     earliestStartDate = new Date(year, earliestSelectedMonth.number - 1);
+    //   } else {
+    //     earliestStartDate = new Date(
+    //       selectedYear,
+    //       earliestSelectedMonth.number - 1
+    //     );
+    //   }
+
+    //   // console.log("Earliest start date:", earliestStartDate);
+    // }
+
+    // if (latestSelectedMonth !== null) {
+    //   latestStartDate = new Date(
+    //     selectedYear,
+    //     latestSelectedMonth.number - 1,
+    //     31
+    //   );
+    //   // console.log("Latest start date:", latestStartDate);
+
+    //   if ((selectedYear === "")) {
+    //     let year = "3000";
+    //     latestStartDate = new Date(year, latestSelectedMonth.number - 1);
+    //   } else {
+    //     latestStartDate = new Date(
+    //       selectedYear,
+    //       latestSelectedMonth.number - 1,
+    //       31
+    //     );
+    //   }
+    // }
+    // // console.log(earliestStartDate, latestStartDate)
+    // setDateRange([earliestStartDate, latestStartDate]);
+    let date_range = [];
+    let earliestSelectedMonth = null;
+    let latestSelectedMonth = null;
+    let earliestStartDate = null;
+    let latestStartDate = null;
+    if (selectedYear === "") {
+      let year_list = [2018, 2020, 2021];
+      for (let i = 0; i < year_list.length; i++) {
+        for (let j = 0; j < selectedMonths.length; j++) {
+          if (selectedMonths[j].isSelected) {
+            earliestStartDate = new Date(
+              year_list[i],
+              selectedMonths[j].number,
+              1
+            );
+            latestStartDate = new Date(
+              year_list[i],
+              selectedMonths[j].number,
+              31
+            );
+            date_range.push(earliestStartDate);
+            date_range.push(latestStartDate);
+          }
+        }
+      }
+      // console.log(date_range)
+      setDateRange(date_range);
+    } else {
+      for (let i = 0; i < selectedMonths.length; i++) {
+        if (selectedMonths[i].isSelected) {
+          earliestStartDate = new Date(
+            selectedYear,
+            selectedMonths[i].number - 1,
+            1
+          );
+          latestStartDate = new Date(
+            selectedYear,
+            selectedMonths[i].number - 1,
+            31
+          );
+          date_range.push(earliestStartDate);
+          date_range.push(latestStartDate);
+        }
+      }
+      setDateRange(date_range);
+    }
+    // console.log(date_range)
+  }, [selectedMonths, selectedYear]);
 
   const dispatch = useDispatch();
 
   function SetView({ coords }) {
     const map = useMap();
     map.setView(coords, map.getZoom());
-    // var newMarker = new L.circle(coords).addTo(map);
-    // var marker = L.circle(coords, 1609.34, {
-    //   color: "blue",
-    //   fillColor: "blue",
-    // }).addTo(map);
-    return null;
   }
 
   function trimString(text) {
     return text
       .toString()
       .replace(/\['|']/g, "")
-      .replace("'", "")
-      .replace("'", "")
-      .replace("'", "")
-      .replace("'", "")
-      .replace("'", "")
-      .replace("'", "")
-      .replace("'", "")
-      .replace("'", "")
-      .replace("'", "")
-      
+      .replaceAll("'", "")
       .trim();
   }
 
-  function showNews(datetime) {
-    if (
-      Date.parse(dateRange[0]) <= Date.parse(datetime) &&
-      Date.parse(datetime) <= Date.parse(dateRange[1])
-    ) {
-      return true;
-    } else {
-      return false;
+  function isWithinOneMonthRange(datetime) {
+    for (let i = 0; i < dateRange.length; i += 2) {
+      const startDate = dateRange[i];
+      const endDate = dateRange[i + 1];
+      if (
+        Date.parse(datetime) >= Date.parse(startDate) &&
+        Date.parse(datetime) <= Date.parse(endDate)
+      ) {
+        return true;
+      }
     }
+    return false;
   }
 
   const [mapLayers, setMapLayers] = useState({
@@ -174,8 +276,6 @@ export default function Pinmap() {
 
   function PinMap() {
     const layerGroups = {};
-
-    // Group markers based on their crime types
     locations.forEach((location) => {
       const news_data = news_info.find(
         (news) => news.info_id === location.info_id
@@ -183,15 +283,12 @@ export default function Pinmap() {
       const news_datetime = news.find(
         (news) => news.news_id === news_data.news_id
       ).publish_date;
-      // console.log(showNews(news_datetime));
-
       const crimeType = news_data.crime_type;
       const icon = getIconForCrimeType(crimeType);
       L.Marker.prototype.options.icon = icon;
       if (!layerGroups[crimeType]) {
         layerGroups[crimeType] = [];
       }
-
       let button;
       const regex = /(\d+)/;
       const match = regex.exec(news_data.news_id);
@@ -237,7 +334,7 @@ export default function Pinmap() {
       const fontSize = { fontSize: 16, fontFamily: "Kanit" };
       const titleStyle = { fontWeight: 500, color: "#44985B" };
 
-      showNews(news_datetime) &&
+      isWithinOneMonthRange(news_datetime) &&
         layerGroups[crimeType].push(
           <Marker
             position={[location.latitude, location.longitude]}
@@ -276,8 +373,15 @@ export default function Pinmap() {
                 <div style={fontSize}>
                   {" "}
                   <span style={titleStyle}>ข่าววันที่: </span>{" "}
-                  {trimString(news_datetime)
-                    ? trimString(news_datetime)
+                  {trimString(news_datetime).split(" ")[0]
+                    ? trimString(news_datetime).split(" ")[0]
+                    : "ไม่มีข้อมูล"}{" "}
+                </div>
+                <div style={fontSize}>
+                  {" "}
+                  <span style={titleStyle}>เวลา: </span>{" "}
+                  {trimString(news_datetime).split(" ")[1]
+                    ? trimString(news_datetime).split(" ")[1] + " นาฬิกา"
                     : "ไม่มีข้อมูล"}{" "}
                 </div>
                 <div style={fontSize}>
@@ -286,6 +390,126 @@ export default function Pinmap() {
                   {trimString(news_data.location)
                     ? trimString(news_data.location)
                     : "ไม่มีข้อมูล"}{" "}
+                </div>
+                <div style={fontSize}>
+                  {" "}
+                  <span style={titleStyle}>เบอร์ติดต่อหากเกิดเหตุการณ์ประเภทนี้: </span>{" "}
+                  {trimString(news_data.crime_type) === "Accident" ? (
+                    Accident.map((data) => (
+                      <span
+                        key={data.id}
+                        style={{
+                          display: "inline",
+                        }}
+                      >
+                        <a
+                          href={"tel:" + data.callNum}
+                          style={{ color: "#000000" }}
+                        >
+                          {data.callNum}
+                        </a>{" "}
+                      </span>
+                    ))
+                  ) : trimString(news_data.crime_type) === "Battery_Assault" ? (
+                    Battery_Assault.map((data) => (
+                      <span
+                        key={data.id}
+                        style={{
+                          display: "inline",
+                        }}
+                      >
+                        <a
+                          href={"tel:" + data.callNum}
+                          style={{ color: "#000000" }}
+                        >
+                          {data.callNum}
+                        </a>{" "}
+                      </span>
+                    ))
+                  ) : trimString(news_data.crime_type) === "Drug" ? (
+                    Drug.map((data) => (
+                      <span
+                        key={data.id}
+                        style={{
+                          display: "inline",
+                        }}
+                      >
+                        <a
+                          href={"tel:" + data.callNum}
+                          style={{ color: "#000000" }}
+                        >
+                          {data.callNum}
+                        </a>{" "}
+                      </span>
+                    ))
+                  ) : trimString(news_data.crime_type) === "Gambling" ? (
+                    Gambling.map((data) => (
+                      <span
+                        key={data.id}
+                        style={{
+                          display: "inline",
+                        }}
+                      >
+                        <a
+                          href={"tel:" + data.callNum}
+                          style={{ color: "#000000" }}
+                        >
+                          {data.callNum}
+                        </a>{" "}
+                      </span>
+                    ))
+                  ) : trimString(news_data.crime_type) === "Murder" ? (
+                    Murder.map((data) => (
+                      <span
+                        key={data.id}
+                        style={{
+                          display: "inline",
+                        }}
+                      >
+                        <a
+                          href={"tel:" + data.callNum}
+                          style={{ color: "#000000" }}
+                        >
+                          {data.callNum}
+                        </a>{" "}
+                      </span>
+                    ))
+                  ) : trimString(news_data.crime_type) === "SexualAbuse" ? (
+                    SexualAbuse.map((data) => (
+                      <span
+                        key={data.id}
+                        style={{
+                          display: "inline",
+                        }}
+                      >
+                        <a
+                          href={"tel:" + data.callNum}
+                          style={{ color: "#000000" }}
+                        >
+                          {data.callNum}
+                        </a>
+                      </span>
+                    ))
+                  ) : trimString(news_data.crime_type) === "Theft_Burglary" ? (
+                    Theft_Burglary.map((data) => (
+                      <span
+                        key={data.id}
+                        style={{
+                          display: "inline",
+                        }}
+                      >
+                        <a
+                          href={"tel:" + data.callNum}
+                          style={{ color: "#000000" }}
+                        >
+                          {data.callNum}
+                        </a>{" "}
+                      </span>
+                    ))
+                  ) : (
+                    <div></div>
+                  )}
+                
                 </div>
               </div>
               <div className="popup-action">{button}</div>
@@ -335,7 +559,6 @@ export default function Pinmap() {
 
   useEffect(() => {
     PinMap();
-    // console.log("re-render pin map!");
   }, [dateRange]);
 
   function DateSelect() {
@@ -356,7 +579,8 @@ export default function Pinmap() {
             หาตำแหน่งของฉัน
           </button>
         </Col>
-        <Col sm className="bg-gray-50 rounded-md ">
+        {/* ห้ามลบ */}
+        {/* <Col sm className="bg-gray-50 rounded-md ">
           เลือกช่วงเวลาแสดงข่าว <br />
           <div className="text-red-600">*เลือกได้แค่ปี 2000 ถึง 2023</div>
           <DatePicker
@@ -370,7 +594,7 @@ export default function Pinmap() {
             showYearDropdown
             dropdownMode="select"
           />
-        </Col>
+        </Col> */}
       </Row>
     );
   }
@@ -398,7 +622,11 @@ export default function Pinmap() {
       setShowUserMarker(true);
     }
   }, [currentLocation]);
-
+  const [yearBarChart, setYearBarChart] = useState("all_year");
+  const year_list = [
+    2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021,
+    2022, 2023,
+  ];
   return (
     <>
       {" "}
@@ -415,7 +643,6 @@ export default function Pinmap() {
                 user_current_location.longitude,
               ]}
             />
-
             <PinMap />
             {showUserMarker && (
               <Marker
@@ -426,13 +653,14 @@ export default function Pinmap() {
               </Marker>
             )}
             <div
-              className="absolute bottom-5 left-10 bg-gray-100 p-4 rounded-md w-60 text-base"
+              className="absolute bottom-5 left-10 rounded-md w-60 text-base"
               style={{ zIndex: 999 }}
             >
               <DateSelect />
             </div>
           </MapContainer>
         </div>
+        <TimeSelecter></TimeSelecter>
       </div>
     </>
   );

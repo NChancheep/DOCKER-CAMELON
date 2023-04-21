@@ -69,3 +69,23 @@
     margin-left: 21px;
     display: flex;
 }
+
+.legend>div {
+    color: black;
+    position: relative;
+    display: flex;
+    height: 20px;
+    padding: 0 0px;
+  }
+  
+  .legend>div::before {
+    content: "";
+    background-color: var(--color);
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  
+  }
+  

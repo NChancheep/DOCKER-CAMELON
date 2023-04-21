@@ -1,3 +1,3 @@
 FROM mysql 
 EXPOSE 3306 
-COPY ./CamelonDumpDb.sql /docker-entrypoint-initdb.d/
+COPY ./camelon-test.sql /docker-entrypoint-initdb.d/

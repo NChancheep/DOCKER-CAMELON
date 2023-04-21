@@ -28,7 +28,7 @@ const EmerContact = [
     name: "หน่วยกู้ชีพวชิรพยาบาล",
     callNum: "1554",
     image:
-      "https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-6/327306726_1275401393040258_7040576077249823649_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHA2F5pFwtmHyZU80G_jOgqM5nem0L_Dsgzmd6bQv8OyMQ3B9cWpUu_7Bvt7zkrZ1cLv5bAt2OjL8CEzTEjqQtP&_nc_ohc=ksaZy5b9ehsAX8PfsXG&_nc_oc=AQk0FpUpdLfHSOQBwu_f7keJI2jZh4eN-SnFOu7KRai4xz77xidRrk_zT-AoL3YguuA&_nc_ht=scontent.fbkk28-1.fna&oh=00_AfB0AQh6oe8oImUSfXDV3PwqVvhfxfcA-l-E1eIih0bSxw&oe=6413EE11",
+      "./vajira1554.jpg",
   },
   {
     id: "5",
@@ -49,7 +49,7 @@ const EmerContact = [
     name: "เหตุด่วนทางน้ำ",
     callNum: "1196",
     image:
-      "http://marine.police.go.th/Pic%20Web/Logo%20TMP%202022.jpg",
+      "./emerwater.jpg",
   },
   {
     id: "8",
@@ -84,28 +84,28 @@ const EmerContact = [
     name: "หน่วยแพทย์ฉุกเฉิน (กทม.)",
     callNum: "1646",
     image:
-      "https://www.niems.go.th/1/Upload/migrate/File/256110121310483636_aiZMSdYTGgZzMsqk.png",
+      "./health1646.jpg",
   },
   {
     id: "14",
     name: "หน่วยแพทย์ฉุกเฉิน (ทั่วไทย)",
     callNum: "1669",
     image:
-      "https://test.niems.go.th/Web2019/UploadCK/Subwebsite/255601141508321334_eh6WOzbZxXrrNcmO.jpg",
+      "./health1669.jpg",
   },
   {
     id: "15",
     name: "ศูนย์เตือนภัยพิบัติแห่งชาติ",
     callNum: "192",
     image:
-      "https://scontent.fbkk12-5.fna.fbcdn.net/v/t39.30808-6/272949537_302929195201995_6445934003490367351_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHGdcp9CvV4_n8K23QdfUERYFykT0KGH1RgXKRPQoYfVIAro3e7tmHrJP1c1AfxffBdtEEGhAzPKyuYiaIhTvVH&_nc_ohc=AAcNDdDAxpQAX8iNV-g&_nc_ht=scontent.fbkk12-5.fna&oh=00_AfCgS18qJgueFITuUsVV3zMR6Ko6-QEp61FtW7njv7tLCw&oe=6412CABC",
+      "earthquake192.jpg",
   },
   {
     id: "16",
     name: "กองปราบปราม",
     callNum: "1195",
     image:
-      "https://scontent.fbkk12-5.fna.fbcdn.net/v/t39.30808-6/272338252_302085875289886_8240862397192277179_n.png?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHXh8pQNGsdHpaiDrtfX3-u6h_4okgmMSDqH_iiSCYxILM849VROkVHFq8EOyaeQWrDw0FvAnBlM3wZO28QPMkc&_nc_ohc=BzQk5T9vK9oAX-x4dNS&_nc_ht=scontent.fbkk12-5.fna&oh=00_AfC8PWRhLG8Dm0DryIouHLTJJS_fcKnsk0TY9IIbUDK6Ig&oe=64133D22",
+      "https://esvector.net/home_es/images/stories/logo/10-11/police_fight.jpg",
   },
   {
     id: "17",

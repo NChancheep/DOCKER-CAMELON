@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import { BsFillTelephoneFill } from "react-icons/bs";
 
 function EmergencyBanner(props) {
-  var calling = "tel:+66" + props.callNum ;
+  var calling = "tel:" + props.callNum ;
   return (
     <Card
       className="justify-content-center align-items-center"

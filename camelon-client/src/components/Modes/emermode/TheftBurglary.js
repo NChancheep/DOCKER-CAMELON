@@ -21,21 +21,21 @@ const EmerContact = [
     name: "หน่วยกู้ชีพวชิรพยาบาล",
     callNum: "1554",
     image:
-      "https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-6/327306726_1275401393040258_7040576077249823649_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHA2F5pFwtmHyZU80G_jOgqM5nem0L_Dsgzmd6bQv8OyMQ3B9cWpUu_7Bvt7zkrZ1cLv5bAt2OjL8CEzTEjqQtP&_nc_ohc=t_PUNzhM23gAX_c3zBI&_nc_oc=AQmB7upZ7NUdPvsgzaUiTxUDhONN0p-rboR4r_OuVfUR-QIzQqJB9AWknBfPIaD0Kgk&_nc_ht=scontent.fbkk28-1.fna&oh=00_AfCQFoe1tG3b8ePcpPNBr41iVMNSzZdFpG4WMsashzXSzA&oe=6419DCD1",
+      "./vajira1554.jpg",
   },
   {
     id: "14",
     name: "หน่วยแพทย์ฉุกเฉิน (ทั่วไทย)",
     callNum: "1669",
     image:
-      "https://test.niems.go.th/Web2019/UploadCK/Subwebsite/255601141508321334_eh6WOzbZxXrrNcmO.jpg",
+      "./health1669.jpg",
   },
   {
     id: "23",
     name: "หน่วยแพทย์กู้ชีพกรุงเทพมหานคร",
     callNum: "1555",
     image:
-      "http://vajirafoundation.org/wp-content/uploads/2021/11/smart.jpg",
+      "./health1646.jpg",
   },
 ];
 function TheftBurglary() {

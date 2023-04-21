@@ -254,7 +254,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Amnat Charoen",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดอำนาจเจริ",
+          "NL_NAME_1": "อำนาจเจริญ",
           "VARNAME_1": null
         }
       },
@@ -403,7 +403,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Ang Thong",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดอ่างทอง",
+          "NL_NAME_1": "อ่างทอง",
           "VARNAME_1": null
         }
       },
@@ -600,7 +600,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Bangkok",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดกรุงเทพมหานคร",
+          "NL_NAME_1": "กรุงเทพมหานคร",
           "VARNAME_1": "Bangkok|Krung Thep|Krung Thep Maha Nakhon|Phra Nakhon-Thonburi"
         }
       },
@@ -1454,7 +1454,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Buri Ram",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดบุรีรัมย์",
+          "NL_NAME_1": "บุรีรัมย์",
           "VARNAME_1": "Buri Rum"
         }
       },
@@ -1811,7 +1811,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Chachoengsao",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดฉะเชิงเทรา",
+          "NL_NAME_1": "ฉะเชิงเทรา",
           "VARNAME_1": "Chaxerngsao|Pad Rew|Paed Riu|Petrieu|Shajeun Dhrao"
         }
       },
@@ -2024,7 +2024,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Chai Nat",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดชัยนาท",
+          "NL_NAME_1": "ชัยนาท",
           "VARNAME_1": "Chainat"
         }
       },
@@ -2421,7 +2421,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Chaiyaphum",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดชัยนาท",
+          "NL_NAME_1": "ชัยภูมิ",
           "VARNAME_1": null
         }
       },
@@ -3807,7 +3807,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Chiang Mai",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดเชียงใหม่",
+          "NL_NAME_1": "เชียงใหม่",
           "VARNAME_1": null
         }
       },
@@ -4304,7 +4304,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Chiang Rai",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดเชียงราย",
+          "NL_NAME_1": "เชียงราย",
           "VARNAME_1": null
         }
       },
@@ -4641,7 +4641,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Chon Buri",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดชลบุรี",
+          "NL_NAME_1": "ชลบุรี",
           "VARNAME_1": null
         }
       },
@@ -5070,7 +5070,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Chumphon",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดชุมพร",
+          "NL_NAME_1": "ชุมพร",
           "VARNAME_1": null
         }
       },
@@ -5479,7 +5479,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Kalasin",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดกาฬสินธุ์",
+          "NL_NAME_1": "กาฬสินธุ์",
           "VARNAME_1": null
         }
       },
@@ -5860,7 +5860,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Kamphaeng Phet",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดกำแพงเพชร",
+          "NL_NAME_1": "กำแพงเพชร",
           "VARNAME_1": "Gampheang Phet|Kambhengbhej"
         }
       },
@@ -6461,7 +6461,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Kanchanaburi",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "อำเภอเมืองกาญจนบ",
+          "NL_NAME_1": "กาญจนบุรี",
           "VARNAME_1": "Kan Buri|Park Prag"
         }
       },
@@ -6982,7 +6982,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Khon Kaen",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดขอนแก่น",
+          "NL_NAME_1": "ขอนแก่น",
           "VARNAME_1": null
         }
       },
@@ -7521,7 +7521,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Krabi",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดกระบี่",
+          "NL_NAME_1": "กระบี่",
           "VARNAME_1": null
         }
       },
@@ -8158,7 +8158,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Lampang",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดลำปาง",
+          "NL_NAME_1": "ลำปาง",
           "VARNAME_1": null
         }
       },
@@ -8567,7 +8567,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Lamphun",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดลำพูน",
+          "NL_NAME_1": "ลำพูน",
           "VARNAME_1": "Hariphunchai|Lampoon"
         }
       },
@@ -9144,7 +9144,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Loei",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดเลย",
+          "NL_NAME_1": "เลย",
           "VARNAME_1": null
         }
       },
@@ -10262,7 +10262,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Mae Hong Son",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดแม่ฮ่องสอ",
+          "NL_NAME_1": "แม่ฮ่องสอน",
           "VARNAME_1": null
         }
       },
@@ -10623,7 +10623,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Maha Sarakham",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดมหาสารคาม",
+          "NL_NAME_1": "มหาสารคาม",
           "VARNAME_1": null
         }
       },
@@ -10892,7 +10892,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Mukdahan",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดมุกดาหาร",
+          "NL_NAME_1": "มุกดาหาร",
           "VARNAME_1": null
         }
       },
@@ -11073,7 +11073,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Nakhon Nayok",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดนครนายก",
+          "NL_NAME_1": "นครนายก",
           "VARNAME_1": "Nakon Nayok"
         }
       },
@@ -11270,7 +11270,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Nakhon Pathom",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "อำเภอเมืองนครปฐม",
+          "NL_NAME_1": "นครปฐม",
           "VARNAME_1": null
         }
       },
@@ -11611,7 +11611,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Nakhon Phanom",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดนครพนม",
+          "NL_NAME_1": "นครพนม",
           "VARNAME_1": null
         }
       },
@@ -12260,7 +12260,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Nakhon Ratchasima",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดนครราชสีม",
+          "NL_NAME_1": "นครราชสีมา",
           "VARNAME_1": "Khorat|Nagara Rajasima|Nakaun Rachasima"
         }
       },
@@ -12725,7 +12725,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Nakhon Sawan",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดนครสวรรค์",
+          "NL_NAME_1": "นครสวรรค์",
           "VARNAME_1": null
         }
       },
@@ -13138,7 +13138,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Nakhon Si Thammarat",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดนครศรีธรร",
+          "NL_NAME_1": "นครศรีธรรมราช",
           "VARNAME_1": "Nakhon Thammarat|Nagara Sridharmaraj|Nakhon Sri Thammarat|Nakhornsrithamrat|Nakornsrithamaraj"
         }
       },
@@ -13671,7 +13671,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Nan",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดน่าน",
+          "NL_NAME_1": "น่าน",
           "VARNAME_1": null
         }
       },
@@ -13924,7 +13924,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Narathiwat",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดนราธิวาส",
+          "NL_NAME_1": "นราธิวาส",
           "VARNAME_1": null
         }
       },
@@ -14217,7 +14217,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Nong Bua Lam Phu",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดหนองบัวลำ",
+          "NL_NAME_1": "หนองบัวลำภู",
           "VARNAME_1": "Nong Bua Lamphu"
         }
       },
@@ -14634,7 +14634,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Nong Khai",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดหนองคาย",
+          "NL_NAME_1": "หนองคาย",
           "VARNAME_1": null
         }
       },
@@ -14739,7 +14739,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Nonthaburi",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดนนทบุรี",
+          "NL_NAME_1": "นนทบุรี",
           "VARNAME_1": null
         }
       },
@@ -14864,7 +14864,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Pathum Thani",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดปทุมธานี",
+          "NL_NAME_1": "ปทุมธานี",
           "VARNAME_1": null
         }
       },
@@ -15045,7 +15045,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Pattani",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดปัตตานี",
+          "NL_NAME_1": "ปัตตานี",
           "VARNAME_1": null
         }
       },
@@ -15576,7 +15576,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Phangnga",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดพังงา",
+          "NL_NAME_1": "พังงา",
           "VARNAME_1": null
         }
       },
@@ -15821,7 +15821,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Phatthalung",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดพัทลุง",
+          "NL_NAME_1": "พัทลุง",
           "VARNAME_1": null
         }
       },
@@ -16166,7 +16166,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Phayao",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดพะเยา",
+          "NL_NAME_1": "พะเยา",
           "VARNAME_1": null
         }
       },
@@ -16687,7 +16687,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Phetchabun",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "อำเภอเมืองเพชรบู",
+          "NL_NAME_1": "เพชรบูรณ์",
           "VARNAME_1": null
         }
       },
@@ -17008,7 +17008,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Phetchaburi",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดเพชรบุรี",
+          "NL_NAME_1": "เพชรบุรี",
           "VARNAME_1": "Phetcha Buri|Bejraburi|Petchburi|Phet Buri|Tetchburit"
         }
       },
@@ -17269,7 +17269,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Phichit",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดพิจิตร",
+          "NL_NAME_1": "พิจิตร",
           "VARNAME_1": null
         }
       },
@@ -17818,7 +17818,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Phitsanulok",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดพิษณุโลก",
+          "NL_NAME_1": "พิษณุโลก",
           "VARNAME_1": "Bisnulok|Phisanulauk|Phitsnulok|Pitsanuloke"
         }
       },
@@ -18023,7 +18023,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Phra Nakhon Si Ayutthaya",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดพระนครศรีอยุธยา",
+          "NL_NAME_1": "พระนครศรีอยุธยา",
           "VARNAME_1": "Phranakhon Si Ayutthaya|Ayudhya|Ayutthaya|Phranakhornsri-ayuthaya"
         }
       },
@@ -18436,7 +18436,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Phrae",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดแพร่",
+          "NL_NAME_1": "แพร่",
           "VARNAME_1": null
         }
       },
@@ -18577,7 +18577,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Phuket",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดภูเก็ต",
+          "NL_NAME_1": "ภูเก็ต",
           "VARNAME_1": null
         }
       },
@@ -18930,7 +18930,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Prachin Buri",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดปราจีนบุร",
+          "NL_NAME_1": "ปราจีนบุรี",
           "VARNAME_1": null
         }
       },
@@ -19371,7 +19371,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Prachuap Khiri Khan",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดประจวบคีรีขัน",
+          "NL_NAME_1": "ประจวบคีรีขันธ์",
           "VARNAME_1": "Korh Luxk|Prachuab Girikhand|Prachuapkirikhan|Prachut Khirikhan"
         }
       },
@@ -19782,7 +19782,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Ranong",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดระนอง",
+          "NL_NAME_1": "ระนอง",
           "VARNAME_1": null
         }
       },
@@ -20063,7 +20063,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Ratchaburi",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดราชบุรี",
+          "NL_NAME_1": "ราชบุรี",
           "VARNAME_1": null
         }
       },
@@ -20296,7 +20296,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Rayong",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดระยอง",
+          "NL_NAME_1": "ระยอง",
           "VARNAME_1": null
         }
       },
@@ -21070,7 +21070,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Sa Kaeo",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดสระแก้ว",
+          "NL_NAME_1": "สระแก้ว",
           "VARNAME_1": "Srakaeo"
         }
       },
@@ -21523,7 +21523,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Sakon Nakhon",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดสกลนคร",
+          "NL_NAME_1": "สกลนคร",
           "VARNAME_1": null
         }
       },
@@ -21664,7 +21664,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Samut Prakan",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดสมุทรปราก",
+          "NL_NAME_1": "สมุทรปราการ",
           "VARNAME_1": "Pak Nam|Samudh Prakarn|Samudraprakar|Samut Phrakhan"
         }
       },
@@ -21789,7 +21789,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Samut Sakhon",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดสมุทรสาคร",
+          "NL_NAME_1": "สมุทรสาคร",
           "VARNAME_1": "Krokkrak Maha Chai|Mahachai|Samudrasagara"
         }
       },
@@ -21894,7 +21894,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Samut Songkhram",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดสมุทรสงคร",
+          "NL_NAME_1": "สมุทรสงคราม",
           "VARNAME_1": "Mae Klong|Samudrasonggram"
         }
       },
@@ -22227,7 +22227,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Saraburi",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดสระบุรี",
+          "NL_NAME_1": "สระบุรี",
           "VARNAME_1": "Sara Buri"
         }
       },
@@ -22558,7 +22558,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Satun",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดสตูล",
+          "NL_NAME_1": "สตูล",
           "VARNAME_1": null
         }
       },
@@ -22951,7 +22951,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Si Sa Ket",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดศรีสะเกษ",
+          "NL_NAME_1": "ศรีสะเกษ",
           "VARNAME_1": "Sisaket|Khukhan|Khukhandh|Srisaket"
         }
       },
@@ -23116,7 +23116,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Sing Buri",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดสิงห์บุรี",
+          "NL_NAME_1": "สิงห์บุรี",
           "VARNAME_1": null
         }
       },
@@ -23561,7 +23561,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Songkhla",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดสงขลา",
+          "NL_NAME_1": "สงขลา",
           "VARNAME_1": null
         }
       },
@@ -23962,7 +23962,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Sukhothai",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดสุโขทัย",
+          "NL_NAME_1": "สุโขทัย",
           "VARNAME_1": "Sawankhalokt|Sukhotai|Sukothai|Svargalok"
         }
       },
@@ -24359,7 +24359,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Suphan Buri",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดสุพรรณบุร",
+          "NL_NAME_1": "สุพรรณบุรี",
           "VARNAME_1": null
         }
       },
@@ -25002,7 +25002,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Surat Thani",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดสุราษฎร์ธ",
+          "NL_NAME_1": "สุราษฎร์ธานี",
           "VARNAME_1": null
         }
       },
@@ -25479,7 +25479,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Surin",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดสุรินทร์",
+          "NL_NAME_1": "สุรินทร์",
           "VARNAME_1": null
         }
       },
@@ -26408,7 +26408,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Tak",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดตาก",
+          "NL_NAME_1": "ตาก",
           "VARNAME_1": null
         }
       },
@@ -26779,7 +26779,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Trang",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดตรัง",
+          "NL_NAME_1": "ตรัง",
           "VARNAME_1": "Tab Tiang"
         }
       },
@@ -27226,7 +27226,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Trat",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดตราด",
+          "NL_NAME_1": "ตราด",
           "VARNAME_1": null
         }
       },
@@ -27803,7 +27803,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Ubon Ratchathani",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดอุบลราชธา",
+          "NL_NAME_1": "อุบลราชธานี",
           "VARNAME_1": null
         }
       },
@@ -28356,7 +28356,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Udon Thani",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดอุดรธานี",
+          "NL_NAME_1": "อุดรธานี",
           "VARNAME_1": null
         }
       },
@@ -28721,7 +28721,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Uthai Thani",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดอุทัยธานี",
+          "NL_NAME_1": "อุทัยธานี",
           "VARNAME_1": null
         }
       },
@@ -29182,7 +29182,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Uttaradit",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดอุตรดิตถ์",
+          "NL_NAME_1": "อุตรดิตถ์",
           "VARNAME_1": null
         }
       },
@@ -29551,7 +29551,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Yala",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดยะลา",
+          "NL_NAME_1": "ยะลา",
           "VARNAME_1": null
         }
       },
@@ -29888,7 +29888,7 @@ export const thailandGeoJson = [{
           "NAME_1": "Yasothon",
           "TYPE_1": "Changwat",
           "ENGTYPE_1": "Province",
-          "NL_NAME_1": "จังหวัดยโสธร",
+          "NL_NAME_1": "ยโสธร",
           "VARNAME_1": null
         }
       }
