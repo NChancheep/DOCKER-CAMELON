@@ -105,39 +105,16 @@ export default function ChoroplethMap() {
 
   function getCrimeRateAndMeter(coordinates, name) {
     const province = provinceCrimes.filter((item) => item.province === name);
-    console.log(province[0]);
-    let total_crime = province[0].numbers;
-    let crime_weight_sum = province[0].crime_weights;
-    console.log(total_crime);
-    console.log(crime_weight_sum);
-
-    // if (coordinates.length > 4) {
-    //   const poly = polygon([coordinates]);
-    //   locations.forEach((location) => {
-    //     const pt = point([location.longitude, location.latitude]);
-    //     if (booleanPointInPolygon(pt, poly)) {
-    //       let news_data = news_info.find(
-    //         (news) => news.info_id === location.info_id
-    //       );
-    //       crime_weight_sum += getCrimeWeight(news_data.crime_type);
-    //       total_crime += 1;
-    //     }
-    //   });
-    // }
-    console.log("=========================================================");
-    console.log("จังหวัด: " + name);
-    console.log("total_crime: " + total_crime);
-    console.log("crime_weight_sum: " + crime_weight_sum);
-    console.log("Population: " + getThailandPopulation(name));
-    console.log(
-      "คำนวณ: " + (crime_weight_sum / getThailandPopulation(name)) * 10
-    );
-    console.log("=========================================================");
-
-    let crime_meter = (crime_weight_sum / 20 / 657575) * 1000;
-    console.log(crime_meter);
-    return { crime_rate: total_crime, crime_meter: crime_meter };
+    if (province.length > 0) {
+      let total_crime = province[0].numbers;
+      let crime_weight_sum = province[0].crime_weights;
+      let crime_meter = (crime_weight_sum / 20 / 657575) * 1000;
+      return { crime_rate: total_crime, crime_meter: crime_meter };
+    } else {
+      return { crime_rate: 0, crime_meter: 0 };
+    }
   }
+
 
   const getColor = (d) => {
     return d >= 100
