@@ -1,0 +1,10 @@
+pandas
+requests
+numpy
+torch
+transformers
+sentencepiece
+pythainlp
+mysql-connector-python
+schedule
+jsons
