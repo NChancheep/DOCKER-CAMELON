@@ -108,7 +108,7 @@ export default function ChoroplethMap() {
     if (province.length > 0) {
       let total_crime = province[0].numbers;
       let crime_weight_sum = province[0].crime_weights;
-      let crime_meter = (crime_weight_sum / 20 / 657575) * 1000;
+      let crime_meter = (total_crime * crime_weight_sum / getThailandPopulation(name)) * 100;
       return { crime_rate: total_crime, crime_meter: crime_meter };
     } else {
       return { crime_rate: 0, crime_meter: 0 };
@@ -117,13 +117,13 @@ export default function ChoroplethMap() {
 
 
   const getColor = (d) => {
-    return d >= 100
+    return d >= 10000
       ? "#800026"
-      : d > 75
+      : d > 8000
       ? "#BD0026"
-      : d > 50
+      : d > 5000
       ? "#FD8D3C"
-      : d > 25
+      : d > 2500
       ? "#a6d96a"
       : "#198754";
   };
@@ -137,7 +137,7 @@ export default function ChoroplethMap() {
     //   "==========================feature.crime_meter=========================="
     // );
     return {
-      fillColor: getColor(feature.crime_meter * 100),
+      fillColor: getColor(feature.crime_meter),
 
       weight: 2,
       opacity: 1,
@@ -310,9 +310,8 @@ export default function ChoroplethMap() {
                   needleColor="red"
                   arcWidth={0.3}
                   percent={
-                    selectedFeature.crime_meter > 1
-                      ? 1
-                      : selectedFeature.crime_meter
+                     ((selectedFeature.crime_meter/30000) * 100)/100 > 1 ? 1 :
+                    ((selectedFeature.crime_meter/30000) * 100)/100
                   }
                   textColor={"black"}
                   // hideText={true} // If you want to hide the text
