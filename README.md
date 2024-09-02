@@ -25,3 +25,24 @@ How to run this project<br>
 10.Enjoy!!!!!<br>
 <br> -->
 //////////////////////////////////////////////////////////////////////////////////////////<br>
+
+# CAMELON
+
+## Prerequisites
+Before you start, ensure that your system has the following installed:
+1. **Docker**: You need Docker to create and manage containers. [Install Docker](https://docs.docker.com/get-docker/).
+2. **Docker Compose**: Docker Compose helps you manage multi-container Docker applications. It's included with Docker Desktop, so no separate installation is necessary if you're using Docker Desktop. [Learn more](https://docs.docker.com/compose/install/).
+
+## Getting Started
+
+Follow the steps below to get the project up and running:
+
+### Step 1: Clone the Repository
+
+Start by cloning this repository to your local machine:
+
+   git clone https://github.com/yourusername/your-repo-name.git
+
+### Step 2: Start the services
+
+  docker-compose up
