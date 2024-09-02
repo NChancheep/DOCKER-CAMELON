@@ -41,8 +41,8 @@ Follow the steps below to get the project up and running:
 
 Start by cloning this repository to your local machine:
 
-   git clone https://github.com/yourusername/your-repo-name.git
+   ```git clone https://github.com/yourusername/your-repo-name.git```
 
 ### Step 2: Start the services
 
-  docker-compose up
+  ```docker-compose up```
